@@ -66,6 +66,24 @@ header {
 	width: 100%;
 	overflow: hidden;
 	visibility: visible;
+	-webkit-animation: fade;
+	-webkit-animation-duration: 3s;
+	-moz-animation: fade;
+	-moz-animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@-moz-keyframes fade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+keyframes fade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
 
 .tl_event > div {
@@ -113,4 +131,51 @@ footer {
 	text-align: center;
 	padding: 10px 0;
 }
+
+@media (max-width: 768px) {
+	.container {
+		width: 95%;
+	}
+
+	header {
+		height: 50px;
+	}
+
+	h1 {
+		font-size: 23px;
+	}
+
+	#time_line {
+		background: url(../img/line.png) repeat-y  30px 0; 
+		position: relative;
+	}
+
+	.tl_year {
+		background: url(../img/point-big.png) no-repeat 50% 0; 
+		text-align: left;
+		margin: 0;
+	}
+
+	.tl_event {
+		background: url(../img/point-small.png) no-repeat 16px 0; 
+	}
+
+	.tl_event div {
+		width: 85%;
+		position: relative;
+	}
+
+
+	.tl_event div.event_l {
+		float: right;
+		background: url(../img/arrow-left.png) no-repeat 0 0;
+	}
+
+	.tl_event div.event_l div{
+		margin-left: 20px;
+		margin-right: 0px; 
+	}
+
+}
+
 
